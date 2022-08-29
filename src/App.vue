@@ -22,7 +22,7 @@
 
       <div id="result">{{ result }}</div>
       <br />
-      <div class="attempt">Tüm Denemelerin : {{ attempts }}</div>
+      <div class="attempt">Tüm Denemelerin ={{ denemeler }}</div>
       <br />
       <div v-if="show" class="numbofattempts">
         {{ numbOfAttempts }} Denemede Bildin
@@ -40,7 +40,7 @@ export default {
       result: "",
       a: Math.floor(Math.random() * 101),
       b: document.getElementById("girdi").value,
-      attempts: [],
+      denemeler: [],
       numbOfAttempts: "",
       show: false,
     };
@@ -52,7 +52,7 @@ export default {
       }
       if (this.a == this.b) {
         this.result = "Bildin Helal Olsun!";
-        this.numbOfAttempts = this.attempts.length;
+        this.numbOfAttempts = this.denemeler.length;
         this.show = true;
       }
       if (this.b < this.a) {
@@ -61,7 +61,7 @@ export default {
       if (this.b > this.a) {
         this.result = "Bilemedin Aşağı İn";
       }
-      this.attempts.push(document.getElementById("girdi").value);
+      this.denemeler.push(document.getElementById("girdi").value);
     },
   },
 };
