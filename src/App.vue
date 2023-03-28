@@ -51,7 +51,7 @@ export default {
         window.alert("100'den küçük bir değer giriniz");
       }
       if (this.a == this.b) {
-        this.result = "Bildin Helal Olsun!";
+        this.result = "Bildin tebrikler!";
         this.numbOfAttempts = this.denemeler.length;
         this.show = true;
       }
